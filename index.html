@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<meta name="description" content="Eco-friendly auto service by experienced driver John Benhar. Local and long-distance rides up to 100 KM.">
+<title>John Benhar | Eco-Friendly Auto Service</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #0f766e;
+    --primary-dark: #064e3b;
+    --secondary: #f59e0b;
+    --dark: #102a43;
+    --text: #334e68;
+    --light: #f0fdfa;
+    --white: #ffffff;
+    --border: #d9e2ec;
+    --shadow: 0 15px 40px rgba(15,118,110,.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: #f8fafc;
+    line-height: 1.6;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Poppins", sans-serif;
+    color: var(--dark);
+}
+
+a { text-decoration: none; }
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button,input,textarea,select { font: inherit; }
+
+section { scroll-margin-top: 80px; }
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Poppins",sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.logo span { color: var(--secondary); }
+
+.nav-links {
+    display: flex;
+    gap: 23px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--primary-dark);
+    background: transparent;
+    border: none;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 130px 20px 75px;
+    background: linear-gradient(135deg,rgba(6,78,59,.96),rgba(15,118,110,.88));
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-content { color: white; }
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(40px,6vw,70px);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.hero h1 span { color: #fde68a; }
+
+.hero p {
+    max-width: 620px;
+    font-size: 17px;
+    color: #e0f2fe;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
+    background: var(--secondary);
+    color: #111827;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(245,158,11,.3);
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary-dark);
+}
+
+.hero-image { position: relative; }
+
+.hero-image img {
+    height: 430px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.3);
+}
+
+.eco-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: white;
+    padding: 16px 21px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+/* GENERAL */
+
+section { padding: 85px 20px; }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: clamp(30px,4vw,40px);
+    margin-bottom: 12px;
+}
+
+.section-title span { color: var(--primary); }
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #627d98;
+}
+
+/* SERVICE RANGE */
+
+.range-section { background: white; }
+
+.range-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 24px;
+    background: linear-gradient(135deg,#ecfdf5,#f0fdfa);
+    border: 1px solid #ccefe1;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.range-icon { font-size: 55px; }
+
+.range-card h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.range-number {
+    font-size: clamp(48px,8vw,76px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--primary);
+    margin: 15px 0;
+}
+
+.range-number small {
+    font-size: 23px;
+}
+
+.range-card p {
+    max-width: 650px;
+    margin: 0 auto 22px;
+    color: var(--text);
+}
+
+.range-points {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0 25px;
+}
+
+.range-points span {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+}
+
+/* FEATURES */
+
+.features { background: #f8fafc; }
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 30px 20px;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 { margin-bottom: 8px; }
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* SAFETY */
+
+.safety-section {
+    padding-top: 0;
+    background: #f8fafc;
+}
+
+.safety-card {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 18px;
+}
+
+.safety-icon { font-size: 38px; }
+
+.safety-card h3 {
+    color: #9a3412;
+    margin-bottom: 5px;
+}
+
+.safety-card p {
+    font-size: 14px;
+    color: #7c4a2b;
+}
+
+/* DRIVER */
+
+.driver { background: var(--light); }
+
+.driver-container {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.driver-photo img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.driver-info h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.driver-info h2 span { color: var(--primary); }
+
+.driver-info p { margin-bottom: 18px; }
+
+.experience {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #d1fae5;
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.driver-list {
+    list-style: none;
+    margin: 20px 0 25px;
+}
+
+.driver-list li {
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* GALLERY */
+
+.gallery { background: white; }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 20px;
+}
+
+.gallery-card {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    background: #e8f5ee;
+}
+
+.gallery-card img {
+    height: 300px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.gallery-card:hover img { transform: scale(1.06); }
+
+/* TIMINGS */
+
+.timings {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.timing-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.timings h2 {
+    color: white;
+    font-size: clamp(30px,4vw,40px);
+    margin-bottom: 15px;
+}
+
+.timings p { color: #d9f4e7; }
+
+.timing-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.time {
+    flex: 1;
+    min-width: 230px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    padding: 25px 20px;
+    border-radius: 15px;
+}
+
+.time strong {
+    display: block;
+    font-size: 21px;
+    color: #fde68a;
+    margin-bottom: 6px;
+}
+
+/* BOOKING */
+
+.booking { background: #f8fafc; }
+
+.booking-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.booking-container h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.booking-intro {
+    text-align: center;
+    color: #627d98;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(15,118,110,.1);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.booking .btn {
+    width: 100%;
+    background: #16a34a;
+    color: white;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #627d98;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* CONTACT */
+
+.contact { background: white; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #d1fae5;
+    font-size: 22px;
+}
+
+.contact-item h4 { margin-bottom: 3px; }
+
+.contact-item p,
+.contact-item a {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.whatsapp-btn {
+    background: #16a34a;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    background: #102a43;
+    color: #d9e2ec;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 { color: white; margin-bottom: 8px; }
+footer span { color: #fde68a; }
+footer p { font-size: 13px; margin-top: 8px; }
+
+/* FLOATING BUTTONS */
+
+.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.float-btn:hover { transform: scale(1.1); }
+.call { background: #2563eb; }
+.whatsapp { background: #16a34a; }
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+    .hero-container,
+    .driver-container,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+
+    .hero-image,
+    .driver-photo {
+        max-width: 600px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .hero-image img { height: 350px; }
+}
+
+@media(max-width:700px) {
+    .navbar { min-height: 68px; }
+    .menu-btn { display: block; }
+
+    .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 0;
+        display: none;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.active { display: flex; }
+
+    .nav-links li { width: 100%; text-align: center; }
+    .nav-links a { display: block; padding: 12px; }
+
+    .hero { padding-top: 115px; }
+    .hero h1 { font-size: 43px; }
+    .hero p { font-size: 15px; }
+    .hero-image img { height: 280px; }
+
+    section { padding: 60px 18px; }
+
+    .feature-grid,
+    .gallery-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 { font-size: 31px; }
+    .driver-info h2 { font-size: 32px; }
+    .driver-photo img { height: 350px; }
+
+    .range-card { padding: 28px 18px; }
+    .range-card h3 { font-size: 23px; }
+
+    .booking-container { padding: 25px 18px; }
+    .booking-container h2 { font-size: 27px; }
+
+    .safety-card { align-items: flex-start; padding: 18px; }
+    .contact-card { padding: 22px 17px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,*::before,*::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <nav class="navbar">
+        <a href="#home" class="logo">JOHN <span>BENHAR</span></a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#range">Service Range</a></li>
+            <li><a href="#driver">Driver</a></li>
+            <li><a href="#gallery">Auto Gallery</a></li>
+            <li><a href="#timings">Timings</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-tag">🌱 Eco-Friendly Auto Service</div>
+
+            <h1>Safe & Reliable <span>Auto Rides</span></h1>
+
+            <p>
+                Travel comfortably with experienced driver
+                <strong>John Benhar</strong>. We provide local
+                and long-distance auto transportation for journeys
+                of up to 100 KM.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">🛺 Book Your Ride</a>
+                <a href="tel:9032961146" class="btn btn-white">📞 Call Now</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://drive.google.com/thumbnail?id=1a1USILCWs1Tfg8jRCOjvifn875Wmyltu&sz=w1200"
+                alt="Eco-friendly auto service"
+                fetchpriority="high"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x450/e5f5e9/087f5b?text=EcoAuto'">
+
+            <div class="eco-badge">🌿 Eco-Friendly Ride</div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose <span>Us?</span></h2>
+            <p>Comfortable, responsible and reliable transportation for your local and long-distance journeys.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>Eco-Friendly</h3>
+                <p>A greener travel choice with a focus on responsible driving.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">🚭</div>
+                <h3>No Drinking</h3>
+                <p>No drinking and driving. Safety is a priority.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Experienced Driver</h3>
+                <p>Travel with driver John Benhar.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Reliable Service</h3>
+                <p>Contact us to discuss your trip and availability.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE RANGE -->
+
+<section class="range-section" id="range">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our <span>Service Range</span></h2>
+            <p>Planning a nearby journey or a longer trip? Tell us your pickup and destination.</p>
+        </div>
+
+        <div class="range-card">
+            <div class="range-icon">🛺</div>
+            <h3>Travel Up to</h3>
+            <div class="range-number">100 <small>KM</small></div>
+            <p>
+                We accept enquiries for journeys within a service range
+                of up to 100 KM. Share your route to check availability
+                and get a fare quote directly from the driver.
+            </p>
+
+            <div class="range-points">
+                <span>📍 Local Journeys</span>
+                <span>🛣️ Long-Distance Trips</span>
+                <span>💬 Fare on Request</span>
+            </div>
+
+            <a href="#booking" class="btn btn-primary">Request Your Trip</a>
+        </div>
+    </div>
+</section>
+
+<!-- SAFETY NOTICE -->
+
+<section class="safety-section">
+    <div class="safety-card">
+        <div class="safety-icon">🚫</div>
+        <div>
+            <h3>NO DRINKING AND DRIVING</h3>
+            <p>We promote responsible driving and road safety. Please travel responsibly and follow all road safety rules.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DRIVER -->
+
+<section class="driver" id="driver">
+    <div class="container driver-container">
+        <div class="driver-photo">
+            <img
+                src="https://drive.google.com/thumbnail?id=1Hunw7ey5V_CXf13AWTeRM6sW9m-Wg48D&sz=w1000"
+                alt="Driver John Benhar"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://placehold.co/500x450/e5f5e9/087f5b?text=John+Benhar'">
+        </div>
+
+        <div class="driver-info">
+            <div class="experience">⭐ Experienced Driver</div>
+            <h2>Meet <span>John Benhar</span></h2>
+
+            <p>
+                John Benhar offers auto transportation with an emphasis
+                on responsible driving, passenger comfort and dependable service.
+            </p>
+
+            <p>
+                Whether you need a short local ride or a journey within
+                100 KM, contact the driver to discuss your destination,
+                fare and availability.
+            </p>
+
+            <ul class="driver-list">
+                <li>✓ Experienced driver</li>
+                <li>✓ Responsible driving</li>
+                <li>✓ Local and long-distance enquiries</li>
+                <li>✓ Service range up to 100 KM</li>
+            </ul>
+
+            <a href="tel:9032961146" class="btn btn-primary">📞 Contact Driver</a>
+        </div>
+    </div>
+</section>
+
+<!-- AUTO GALLERY -->
+
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our <span>Auto Gallery</span></h2>
+            <p>Explore photos of our auto service.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img
+                    src="https://drive.google.com/thumbnail?id=1a1USILCWs1Tfg8jRCOjvifn875Wmyltu&sz=w1200"
+                    alt="EcoAuto vehicle photo one"
+                    loading="lazy"
+                    onerror="this.onerror=null;this.src='https://placehold.co/500x350/e5f5e9/087f5b?text=Auto+Photo+1'">
+            </div>
+
+            <div class="gallery-card">
+                <img
+                    src="https://drive.google.com/thumbnail?id=1dzYG-fNbJo-GiUlw1aoGEP3JgqcLw_kJ&sz=w1200"
+                    alt="EcoAuto vehicle photo two"
+                    loading="lazy"
+                    onerror="this.onerror=null;this.src='https://placehold.co/500x350/e5f5e9/087f5b?text=Auto+Photo+2'">
+            </div>
+
+            <div class="gallery-card">
+                <img
+                    src="https://drive.google.com/thumbnail?id=1eWe02FiApQtGj5bIlQhTo9MVdYAJlWZ2&sz=w1200"
+                    alt="EcoAuto vehicle photo three"
+                    loading="lazy"
+                    onerror="this.onerror=null;this.src='https://placehold.co/500x350/e5f5e9/087f5b?text=Auto+Photo+3'">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIMINGS -->
+
+<section class="timings" id="timings">
+    <div class="timing-container">
+        <h2>Available Timings</h2>
+        <p>Contact the driver to confirm your preferred time and trip availability.</p>
+
+        <div class="timing-box">
+            <div class="time">
+                <strong>6:00 AM – 12:00 PM</strong>
+                Morning Service
+            </div>
+
+            <div class="time">
+                <strong>4:00 PM – 11:00 PM</strong>
+                Evening Service
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING FORM -->
+
+<section class="booking" id="booking">
+    <div class="booking-container">
+        <h2>Book Your Auto</h2>
+        <p class="booking-intro">
+            Enter your trip details to request availability and a fare.
+            No fixed rates are displayed on this website.
+        </p>
+
+        <form id="bookingForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="customerName">Your Name *</label>
+                    <input type="text" id="customerName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Your Phone Number *</label>
+                    <input type="tel" id="customerPhone" placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup">Pickup Location *</label>
+                    <input type="text" id="pickup" placeholder="Where should we pick you up?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination *</label>
+                    <input type="text" id="destination" placeholder="Where would you like to go?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tripDate">Travel Date *</label>
+                    <input type="date" id="tripDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tripTime">Preferred Time *</label>
+                    <select id="tripTime" required>
+                        <option value="">Select a time</option>
+                        <option>6:00 AM – 12:00 PM</option>
+                        <option>4:00 PM – 11:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tripNotes">Additional Details</label>
+                <textarea id="tripNotes" placeholder="Number of passengers, return journey or other requirements"></textarea>
+            </div>
+
+            <button type="submit" class="btn whatsapp-btn">
+                💬 Request Fare on WhatsApp
+            </button>
+
+            <p class="form-note">
+                Your request will open in WhatsApp. The driver must confirm
+                the fare, availability and booking separately.
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact <span>Us</span></h2>
+            <p>Call or message us for your auto booking and fare enquiry.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Get In Touch</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:9032961146">9032961146</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/919032961146" target="_blank" rel="noopener noreferrer">9032961146</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">👨‍✈️</div>
+                    <div>
+                        <h4>Driver</h4>
+                        <p>John Benhar</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🛣️</div>
+                    <div>
+                        <h4>Service Range</h4>
+                        <p>Journeys up to 100 KM, subject to availability</p>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:9032961146" class="btn btn-primary">📞 Call Now</a>
+                    <a href="https://wa.me/919032961146" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>Quick Enquiry</h3>
+                <p style="margin-bottom:20px">
+                    Send your name, phone number and journey details directly to the driver.
+                </p>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Your Name *</label>
+                        <input type="text" id="contactName" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">Your Phone Number *</label>
+                        <input type="tel" id="contactPhone" placeholder="10-digit mobile number"
+                               pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Trip Details *</label>
+                        <textarea id="contactMessage" placeholder="Pickup, destination and travel date" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn whatsapp-btn">
+                        💬 Send Enquiry on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+    <h3>JOHN <span>BENHAR</span></h3>
+    <p>🌱 Eco-Friendly Auto Service</p>
+    <p>Local and long-distance enquiries up to 100 KM.</p>
+    <p>© <span id="year"></span> John Benhar. All Rights Reserved.</p>
+</footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+
+<div class="floating">
+    <a href="tel:9032961146" class="float-btn call" aria-label="Call John Benhar">📞</a>
+    <a href="https://wa.me/919032961146" target="_blank" rel="noopener noreferrer"
+       class="float-btn whatsapp" aria-label="WhatsApp John Benhar">💬</a>
+</div>
+
+<script>
+"use strict";
+
+/* MOBILE NAVIGATION */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+    });
+});
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* PREVENT PAST TRAVEL DATES */
+
+const dateInput = document.getElementById("tripDate");
+const now = new Date();
+
+dateInput.min = [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, "0"),
+    String(now.getDate()).padStart(2, "0")
+].join("-");
+
+/* WHATSAPP BOOKING */
+
+document.getElementById("bookingForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!this.reportValidity()) return;
+
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const pickup = document.getElementById("pickup").value.trim();
+    const destination = document.getElementById("destination").value.trim();
+    const date = document.getElementById("tripDate").value;
+    const time = document.getElementById("tripTime").value;
+    const notes = document.getElementById("tripNotes").value.trim();
+
+    if (!name || !phone || !pickup || !destination || !date || !time) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    const message =
+`ECO-FRIENDLY AUTO - BOOKING ENQUIRY
+
+Name: ${name}
+Phone: ${phone}
+Pickup: ${pickup}
+Destination: ${destination}
+Travel Date: ${date}
+Preferred Time: ${time}
+Additional Details: ${notes || "None"}
+
+Please confirm the fare and availability for this journey.`;
+
+    const url = "https://wa.me/919032961146?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+});
+
+/* WHATSAPP QUICK ENQUIRY */
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!this.reportValidity()) return;
+
+    const name = document.getElementById("contactName").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+    const details = document.getElementById("contactMessage").value.trim();
+
+    if (!name || !phone || !details) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    const message =
+`HELLO JOHN BENHAR
+
+Name: ${name}
+Phone: ${phone}
+Trip Details: ${details}
+
+Please let me know the fare and availability.`;
+
+    const url = "https://wa.me/919032961146?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+});
+</script>
+
+</body>
+</html>
